@@ -1,0 +1,6 @@
+{
+    "csv_files_path": "C:/Users/zknap/Desktop/Python Scripts/data/",
+    "min_year": "2013",
+    "database_path": "C:/Users/zknap/Desktop/Python Scripts/Daily_data.xlsx",
+    "database_backup_path": "C:/Users/zknap/Desktop/Python Scripts/Daily_data_backup.xlsx"
+}
