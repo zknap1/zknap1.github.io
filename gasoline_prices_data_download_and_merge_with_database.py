@@ -12,7 +12,7 @@ import numpy as np
 import shutil
 from locale import setlocale, LC_NUMERIC, format_string
 
-setlocale(LC_NUMERIC, 'sk_SK')
+setlocale(LC_NUMERIC, 'en_EN')
 
 # Load configuration file
 try:
@@ -56,18 +56,18 @@ sk_data['Date'] = pd.to_datetime(sk_data['Date'], errors='coerce')
 sk_data = sk_data[sk_data['Date'].notna()]
 sk_data_sorted = sk_data.sort_values('Date')
 
-sk_data_sorted["Euro-super 95  (I) 1000L"] = [format_string('%.2f', float(
-    str(i).replace(",", ""))) for i in sk_data_sorted["Euro-super 95  (I) 1000L"]]
-sk_data_sorted["Gas oil automobile Automotive gas oil Dieselkraftstoff (I) 1000L"] = [format_string('%.2f', float(
-    str(i).replace(",", ""))) for i in sk_data_sorted["Gas oil automobile Automotive gas oil Dieselkraftstoff (I) 1000L"]]
-sk_data_sorted["Gas oil de chauffage Heating gas oil Heizöl (II) 1000L"] = [format_string('%.2f', float(
-    str(i).replace(",", ""))) for i in sk_data_sorted["Gas oil de chauffage Heating gas oil Heizöl (II) 1000L"]]
-sk_data_sorted["Fuel oil - Schweres Heizöl (III) Soufre <= 1% Sulphur <= 1% Schwefel <= 1% t"] = [format_string('%.2f', float(
-    str(i).replace(",", ""))) for i in sk_data_sorted["Fuel oil - Schweres Heizöl (III) Soufre <= 1% Sulphur <= 1% Schwefel <= 1% t"]]
-sk_data_sorted["Fuel oil -Schweres Heizöl (III) Soufre > 1% Sulphur > 1% Schwefel > 1% t"] = [format_string('%.2f', float(
-    str(i).replace(",", ""))) for i in sk_data_sorted["Fuel oil -Schweres Heizöl (III) Soufre > 1% Sulphur > 1% Schwefel > 1% t"]]
-sk_data_sorted["GPL pour moteur LPG motor fuel 1000L"] = [format_string('%.2f', float(
-    str(i).replace(",", ""))) for i in sk_data_sorted["GPL pour moteur LPG motor fuel 1000L"]]
+sk_data_sorted["Euro-super 95  (I) 1000L"] = [float(
+    str(i).replace(",", "")) for i in sk_data_sorted["Euro-super 95  (I) 1000L"]]
+sk_data_sorted["Gas oil automobile Automotive gas oil Dieselkraftstoff (I) 1000L"] = [float(
+    str(i).replace(",", "")) for i in sk_data_sorted["Gas oil automobile Automotive gas oil Dieselkraftstoff (I) 1000L"]]
+sk_data_sorted["Gas oil de chauffage Heating gas oil Heizöl (II) 1000L"] = [float(
+    str(i).replace(",", "")) for i in sk_data_sorted["Gas oil de chauffage Heating gas oil Heizöl (II) 1000L"]]
+sk_data_sorted["Fuel oil - Schweres Heizöl (III) Soufre <= 1% Sulphur <= 1% Schwefel <= 1% t"] = [float(
+    str(i).replace(",", "")) for i in sk_data_sorted["Fuel oil - Schweres Heizöl (III) Soufre <= 1% Sulphur <= 1% Schwefel <= 1% t"]]
+sk_data_sorted["Fuel oil -Schweres Heizöl (III) Soufre > 1% Sulphur > 1% Schwefel > 1% t"] = [float(
+    str(i).replace(",", "")) for i in sk_data_sorted["Fuel oil -Schweres Heizöl (III) Soufre > 1% Sulphur > 1% Schwefel > 1% t"]]
+sk_data_sorted["GPL pour moteur LPG motor fuel 1000L"] = [float(
+    str(i).replace(",", "")) for i in sk_data_sorted["GPL pour moteur LPG motor fuel 1000L"]]
 
 
 # Load database excel file
