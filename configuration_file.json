@@ -1,6 +1,10 @@
 {
     "csv_files_path": "C:/Users/zknap/Desktop/Python Scripts/data/",
     "min_year": "2013",
-    "database_path": "C:/Users/zknap/Desktop/Python Scripts/Daily_data.xlsx",
-    "database_backup_path": "C:/Users/zknap/Desktop/Python Scripts/Daily_data_backup.xlsx"
+    "database_path_daily": "C:/Users/zknap/Desktop/Python Scripts/Daily_data.xlsx",
+    "database_path_weekly": "C:/Users/zknap/Desktop/Python Scripts/Weekly_data.xlsx",
+    "database_backup_path_daily": "C:/Users/zknap/Desktop/Python Scripts/Daily_data_backup.xlsx",
+    "database_backup_path_weekly": "C:/Users/zknap/Desktop/Python Scripts/Weekly_data_backup.xlsx",
+    "oil_proces_data_file_path":"C:/Users/zknap/Desktop/Python Scripts/oil_data.xlsx",
+    "oil_prices_data_sheet_name":"Prices wo taxes, per CTR"
 }
