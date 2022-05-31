@@ -4,6 +4,7 @@ import json
 import pandas as pd
 import os
 import time
+from selenium.webdriver.common.by import By
 
 try:
     config = open('configuration_file.json', encoding='utf8', errors='ignore')
@@ -39,7 +40,7 @@ driver.get(URL)
 
 # download excel file
 export_data_xpath = '/html/body/form/dllimport/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[1]/td[1]/div[1]/div/div/table[2]/tbody/tr[2]/td[2]/div[2]/a'
-driver.find_element_by_xpath(export_data_xpath).click()
+driver.find_element(by=By.XPATH, value=export_data_xpath).click()
 
 time.sleep(2)
 df = pd.read_csv(downloads+"SAXIndex.csv")
@@ -49,3 +50,5 @@ if os.path.exists(downloads+"SAXIndex.csv"):
     os.remove(downloads+"SAXIndex.csv")
 
 driver.close()
+
+
